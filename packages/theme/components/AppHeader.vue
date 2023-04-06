@@ -112,10 +112,10 @@ import LocaleSelector from './LocaleSelector';
 import SearchResults from '~/components/SearchResults';
 import HeaderNavigation from './HeaderNavigation';
 import { clickOutside } from '@storefront-ui/vue/src/utilities/directives/click-outside/click-outside-directive.js';
-import {
-  mapMobileObserver,
-  unMapMobileObserver
-} from '@storefront-ui/vue/src/utilities/mobile-observer.js';
+// import {
+//   mapMobileObserver,
+//   unMapMobileObserver
+// } from '@storefront-ui/vue/src/utilities/mobile-observer.js';
 import debounce from 'lodash.debounce';
 import mockedSearchProducts from '../mockedSearchProducts.json';
 import { addBasePath } from '@vue-storefront/core';
@@ -144,7 +144,7 @@ export default {
     const isSearchOpen = ref(false);
     const searchBarRef = ref(null);
     const result = ref(null);
-    const isMobile = ref(mapMobileObserver().isMobile.get());
+    // const isMobile = ref(mapMobileObserver().isMobile.get());
 
     const cartTotalItems = computed(() => {
       const count = cartGetters.getTotalItems(cart.value);
@@ -183,28 +183,28 @@ export default {
     }, 1000);
 
     const closeOrFocusSearchBar = () => {
-      if (isMobile.value) {
-        return closeSearch();
-      } else {
-        term.value = '';
-        return searchBarRef.value.$el.children[0].focus();
-      }
+      // if (isMobile.value) {
+      //   return closeSearch();
+      // } else {
+      //   term.value = '';
+      //   return searchBarRef.value.$el.children[0].focus();
+      // }
     };
 
-    watch(() => term.value, (newVal, oldVal) => {
-      const shouldSearchBeOpened = (!isMobile.value && term.value.length > 0) && ((!oldVal && newVal) || (newVal.length !== oldVal.length && isSearchOpen.value === false));
-      if (shouldSearchBeOpened) {
-        isSearchOpen.value = true;
-      }
-    });
+    // watch(() => term.value, (newVal, oldVal) => {
+    //   // const shouldSearchBeOpened = (!isMobile.value && term.value.length > 0) && ((!oldVal && newVal) || (newVal.length !== oldVal.length && isSearchOpen.value === false));
+    //   // if (shouldSearchBeOpened) {
+    //   //   isSearchOpen.value = true;
+    //   // }
+    // });
 
     const removeSearchResults = () => {
       result.value = null;
     };
 
-    onBeforeUnmount(() => {
-      unMapMobileObserver();
-    });
+    // onBeforeUnmount(() => {
+    //   unMapMobileObserver();
+    // });
 
     return {
       accountIcon,
@@ -220,7 +220,7 @@ export default {
       result,
       closeOrFocusSearchBar,
       searchBarRef,
-      isMobile,
+      isMobile: false,
       isMobileMenuOpen,
       removeSearchResults,
       addBasePath
