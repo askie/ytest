@@ -1,11 +1,11 @@
-import { Store } from '@vue-storefront/__replace_me__-api';
+import { Store } from '@vue-storefront/ytest-api';
 import { Context, useStoreFactory } from '@vue-storefront/core';
 
 export const useStore = useStoreFactory<Store>({
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   load(context: Context, params) {
     console.log('Mocked: useStore.load');
-
+    context.$ytest.api.api1();
     return Promise.resolve({});
   },
 

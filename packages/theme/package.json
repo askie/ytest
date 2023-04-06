@@ -1,5 +1,5 @@
 {
-  "name": "@vue-storefront/__replace_me__-theme",
+  "name": "@vue-storefront/ytest-theme",
   "version": "0.0.1",
   "private": true,
   "engines": {
@@ -23,10 +23,10 @@
   },
   "dependencies": {
     "@storefront-ui/vue": "0.11.4",
-    "@vue-storefront/__replace_me__": "0.0.1",
-    "@vue-storefront/middleware": "~2.5.4",
-    "@vue-storefront/nuxt": "~2.5.4",
-    "@vue-storefront/nuxt-theme": "~2.5.4",
+    "@vue-storefront/ytest": "0.0.1",
+    "@vue-storefront/middleware": "~2.7.5",
+    "@vue-storefront/nuxt": "~2.7.5",
+    "@vue-storefront/nuxt-theme": "~2.7.5",
     "cookie-universal-nuxt": "^2.1.5",
     "core-js": "^3.19.0",
     "nuxt": "^2.15.8",

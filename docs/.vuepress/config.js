@@ -1,7 +1,7 @@
 module.exports = {
-  title: 'Vue Storefront 2 for __replace_me__',
+  title: 'Vue Storefront 2 for ytest',
   base: '/',
-  description: 'Documentation for the __replace_me__ connector for Vue Storefront 2',
+  description: 'Documentation for the ytest connector for Vue Storefront 2',
   head: [
     ['link', { rel: 'icon', href: '/favicon.png' }]
   ],
@@ -15,25 +15,25 @@ module.exports = {
             Hack for loading images properly.
             ref: https://github.com/vuejs/vue-loader/issues/1612#issuecomment-559366730
            */
-          {  ...useRule.options, esModule: false } :
+          { ...useRule.options, esModule: false } :
           useRule.options
       }))
     }))
   },
   plugins: [
-  '@vuepress/plugin-back-to-top',
-  [
-    '@vuepress/plugin-medium-zoom',
-    {
-      // This selector excludes images from the "Integrations" page
-      selector: 'main :not(.tile-image) > img'
-    }
+    '@vuepress/plugin-back-to-top',
+    [
+      '@vuepress/plugin-medium-zoom',
+      {
+        // This selector excludes images from the "Integrations" page
+        selector: 'main :not(.tile-image) > img'
+      }
+    ],
+    '@vuepress/active-header-links',
+    '@vuepress/search'
   ],
-  '@vuepress/active-header-links',
-  '@vuepress/search'
-],
   themeConfig: {
-    repo: 'https://github.com/vuestorefront/__replace_me__',
+    repo: 'https://github.com/vuestorefront/ytest',
     editLinks: true,
     docsDir: 'docs',
     docsBranch: 'develop',
@@ -43,8 +43,8 @@ module.exports = {
       { text: 'Vue Storefront', link: 'https://vuestorefront.io/' },
       { text: 'Core Documentation', link: 'https://docs.vuestorefront.io/v2/' },
       // { text: 'Demo', link: '' },
-      { text: 'GitHub', link: 'https://github.com/vuestorefront/__replace_me__'},
-      { text: 'Roadmap', link: 'https://github.com/vuestorefront/__replace_me__'}
+      { text: 'GitHub', link: 'https://github.com/vuestorefront/ytest' },
+      { text: 'Roadmap', link: 'https://github.com/vuestorefront/ytest' }
     ],
     sidebar: [
       {
